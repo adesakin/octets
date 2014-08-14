@@ -1,0 +1,12 @@
+<h1>Editing collection_attribute</h1>
+
+<% form_for(@collection_attribute) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @collection_attribute %> |
+<%= link_to 'Back', collection_attributes_path %>

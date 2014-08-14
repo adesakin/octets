@@ -1,0 +1,13 @@
+<p>
+  <b>Collection:</b>
+  <%=h @network_allocation.collection_id %>
+</p>
+
+<p>
+  <b>Network address:</b>
+  <%=h @network_allocation.network_address %>
+</p>
+
+
+<%= link_to 'Edit', edit_network_allocation_path(@network_allocation) %> |
+<%= link_to 'Back', network_allocations_path %>

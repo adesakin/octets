@@ -1,0 +1,44 @@
+<h1>Editing collection</h1>
+
+<% form_for(@collection) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :parent_id %><br />
+    <%= f.text_field :parent_id %>
+  </p>
+  <p>
+    <%= f.label :id_path %><br />
+    <%= f.text_field :id_path %>
+  </p>
+  <p>
+    <%= f.label :children_count %><br />
+    <%= f.text_field :children_count %>
+  </p>
+  <p>
+    <%= f.label :level %><br />
+    <%= f.text_field :level %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :notes %><br />
+    <%= f.text_field :notes %>
+  </p>
+  <p>
+    <%= f.label :updated_by %><br />
+    <%= f.text_field :updated_by %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @collection %> |
+<%= link_to 'Back', collections_path %>

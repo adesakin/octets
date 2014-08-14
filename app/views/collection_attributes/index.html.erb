@@ -1,0 +1,18 @@
+<h1>Listing collection_attributes</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @collection_attributes.each do |collection_attribute| %>
+  <tr>
+    <td><%= link_to 'Show', collection_attribute %></td>
+    <td><%= link_to 'Edit', edit_collection_attribute_path(collection_attribute) %></td>
+    <td><%= link_to 'Destroy', collection_attribute, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New collection_attribute', new_collection_attribute_path %>

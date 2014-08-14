@@ -1,0 +1,43 @@
+<p>
+  <b>Collection:</b>
+  <%=h @subnet.collection_id %>
+</p>
+
+<p>
+  <b>Network address:</b>
+  <%=h @subnet.network_address %>
+</p>
+
+<p>
+  <b>Subnet mask:</b>
+  <%=h @subnet.subnet_mask %>
+</p>
+
+<p>
+  <b>Network class:</b>
+  <%=h @subnet.network_class %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @subnet.description %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%=h @subnet.note %>
+</p>
+
+<p>
+  <b>Updated by:</b>
+  <%=h @subnet.updated_by %>
+</p>
+
+<p>
+  <b>Parent:</b>
+  <%=h @subnet.parent_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_subnet_path(@subnet) %> |
+<%= link_to 'Back', subnets_path %>

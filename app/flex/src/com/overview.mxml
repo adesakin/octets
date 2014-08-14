@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" xmlns:com="com.*">
+	
+	<mx:VBox x="0" y="0" width="100%" height="100%" verticalGap="2">
+		<mx:Canvas verticalScrollPolicy="off" 
+			horizontalScrollPolicy="off" width="100%" height="30" backgroundColor="#F3F3F3" minWidth="540">
+			<mx:HBox x="0" width="100%" height="100%" verticalCenter="0"  verticalAlign="middle" paddingLeft="20" horizontalGap="30" horizontalScrollPolicy="off">
+				<mx:Label text="OVERVIEW" width="174" styleName="myText" fontWeight="normal"/>
+				<mx:VRule height="100%"/>
+				<mx:LinkBar dataProvider="overviewStack" id="overviewLinkBar">
+				</mx:LinkBar>
+				<mx:Spacer width="640" />				
+			</mx:HBox>
+			<mx:HBox  right="20" verticalAlign="middle" width="250" height="100%" verticalCenter="0" horizontalScrollPolicy="off" >
+				<mx:Button label="Search" styleName="myButton" width="80" fontWeight="normal" />
+				<mx:TextInput styleName="myText" fontWeight="normal" width="160" borderStyle="solid"/>
+			</mx:HBox>				
+		</mx:Canvas>
+		<mx:ViewStack id="overviewStack" width="100%" height="100%">
+			<mx:Canvas label="Dashboard" width="100%" height="100%">
+				<com:overviewDashboard />
+			</mx:Canvas>
+			<mx:Canvas label="myOverview" width="100%" height="100%">
+			</mx:Canvas>
+		</mx:ViewStack>
+		
+		
+
+	</mx:VBox>
+</mx:Canvas>

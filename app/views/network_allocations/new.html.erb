@@ -1,0 +1,19 @@
+<h1>New network_allocation</h1>
+
+<% form_for(@network_allocation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :collection_id %><br />
+    <%= f.text_field :collection_id %>
+  </p>
+  <p>
+    <%= f.label :network_address %><br />
+    <%= f.text_field :network_address %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', network_allocations_path %>

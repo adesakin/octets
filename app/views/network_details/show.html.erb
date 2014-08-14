@@ -1,0 +1,38 @@
+<p>
+  <b>Collection:</b>
+  <%=h @network_detail.collection_id %>
+</p>
+
+<p>
+  <b>Network address:</b>
+  <%=h @network_detail.network_address %>
+</p>
+
+<p>
+  <b>Subnet mask:</b>
+  <%=h @network_detail.subnet_mask %>
+</p>
+
+<p>
+  <b>Network class:</b>
+  <%=h @network_detail.network_class %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @network_detail.description %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%=h @network_detail.note %>
+</p>
+
+<p>
+  <b>Updated by:</b>
+  <%=h @network_detail.updated_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_network_detail_path(@network_detail) %> |
+<%= link_to 'Back', network_details_path %>

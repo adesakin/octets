@@ -1,0 +1,43 @@
+<p>
+  <b>Parent:</b>
+  <%=h @collection.parent_id %>
+</p>
+
+<p>
+  <b>Id path:</b>
+  <%=h @collection.id_path %>
+</p>
+
+<p>
+  <b>Children count:</b>
+  <%=h @collection.children_count %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%=h @collection.level %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @collection.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @collection.description %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%=h @collection.notes %>
+</p>
+
+<p>
+  <b>Updated by:</b>
+  <%=h @collection.updated_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_collection_path(@collection) %> |
+<%= link_to 'Back', collections_path %>

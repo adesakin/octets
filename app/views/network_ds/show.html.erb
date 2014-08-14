@@ -1,0 +1,18 @@
+<p>
+  <b>Network address:</b>
+  <%=h @network_d.network_address %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @network_d.description %>
+</p>
+
+<p>
+  <b>Updated by:</b>
+  <%=h @network_d.updated_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_network_d_path(@network_d) %> |
+<%= link_to 'Back', network_ds_path %>

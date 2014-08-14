@@ -1,0 +1,24 @@
+<h1>Listing network_ds</h1>
+
+<table>
+  <tr>
+    <th>Network address</th>
+    <th>Description</th>
+    <th>Updated by</th>
+  </tr>
+
+<% @network_ds.each do |network_d| %>
+  <tr>
+    <td><%=h network_d.network_address %></td>
+    <td><%=h network_d.description %></td>
+    <td><%=h network_d.updated_by %></td>
+    <td><%= link_to 'Show', network_d %></td>
+    <td><%= link_to 'Edit', edit_network_d_path(network_d) %></td>
+    <td><%= link_to 'Destroy', network_d, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New network_d', new_network_d_path %>

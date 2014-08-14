@@ -1,0 +1,34 @@
+<h1>Listing subnets</h1>
+
+<table>
+  <tr>
+    <th>Collection</th>
+    <th>Network address</th>
+    <th>Subnet mask</th>
+    <th>Network class</th>
+    <th>Description</th>
+    <th>Note</th>
+    <th>Updated by</th>
+    <th>Parent</th>
+  </tr>
+
+<% @subnets.each do |subnet| %>
+  <tr>
+    <td><%=h subnet.collection_id %></td>
+    <td><%=h subnet.network_address %></td>
+    <td><%=h subnet.subnet_mask %></td>
+    <td><%=h subnet.network_class %></td>
+    <td><%=h subnet.description %></td>
+    <td><%=h subnet.note %></td>
+    <td><%=h subnet.updated_by %></td>
+    <td><%=h subnet.parent_id %></td>
+    <td><%= link_to 'Show', subnet %></td>
+    <td><%= link_to 'Edit', edit_subnet_path(subnet) %></td>
+    <td><%= link_to 'Destroy', subnet, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New subnet', new_subnet_path %>

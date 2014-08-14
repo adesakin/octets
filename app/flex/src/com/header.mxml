@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" verticalScrollPolicy="off"
+	width="100%" height="30" backgroundColor="#F3F3F3">
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Text;
+			
+			[Bindable]
+			private var headerFiller:Text;
+			
+			
+		]]>
+	</mx:Script>
+	
+	<mx:HBox x="0" width="100%" height="100%" verticalCenter="0"  verticalAlign="middle" paddingLeft="20" horizontalGap="30" horizontalScrollPolicy="off">
+		<mx:Label text="NETWORK" width="174" styleName="myText" fontWeight="normal"/>
+		<mx:VRule height="100%"/>
+		<mx:Button label="View" styleName="myButton" width="90" />
+		<mx:Button label="Add" styleName="myButton" width="90"/>
+		<mx:Button label="Edit" styleName="myButton" width="90"/>
+		<mx:Button label="Manage" styleName="myButton" width="90"/>
+	</mx:HBox>
+	
+	
+</mx:Canvas>

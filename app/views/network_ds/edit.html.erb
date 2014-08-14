@@ -1,0 +1,24 @@
+<h1>Editing network_d</h1>
+
+<% form_for(@network_d) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :network_address %><br />
+    <%= f.text_field :network_address %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :updated_by %><br />
+    <%= f.text_field :updated_by %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @network_d %> |
+<%= link_to 'Back', network_ds_path %>

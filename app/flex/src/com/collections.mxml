@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" xmlns:com="com.*">
+	
+	<mx:VBox x="0" y="0" width="100%" height="100%" verticalGap="2">
+		<mx:Canvas verticalScrollPolicy="off" 
+			horizontalScrollPolicy="off" width="100%" height="30" backgroundColor="#F3F3F3" minWidth="540">
+			<mx:HBox x="0" width="100%" height="100%" verticalCenter="0"  verticalAlign="middle" paddingLeft="20" horizontalGap="30" horizontalScrollPolicy="off">
+				<mx:Label text="COLLECTIONS" width="174" styleName="myText" fontWeight="normal"/>
+				<mx:VRule height="100%"/>
+				<mx:LinkBar dataProvider="collectionStack" id="collectionLinkBar">
+				</mx:LinkBar>
+				<mx:Spacer width="640" />				
+			</mx:HBox>
+			<mx:HBox  right="20" verticalAlign="middle" width="250" height="100%" verticalCenter="0" horizontalScrollPolicy="off" >
+				<mx:Button label="Search" styleName="myButton" width="80" fontWeight="normal" />
+				<mx:TextInput styleName="myText" fontWeight="normal" width="160" borderStyle="solid"/>
+			</mx:HBox>				
+		</mx:Canvas>
+		<mx:ViewStack id="collectionStack" width="100%" height="100%">
+			<mx:Canvas label="View Collections" width="100%" height="100%">
+				<com:collectionsAdd />
+			</mx:Canvas>
+			<mx:Canvas label="Add Collections" width="100%" height="100%">
+				<mx:VBox width="100%" height="100%">
+					<mx:HBox width="100%">
+						<mx:Spacer width="250" />
+						<mx:Button x="10" y="0" label="Parent" cornerRadius="0" height="18"/>
+						<mx:Button x="83" y="0" label="Child" height="18" cornerRadius="0"/>
+						<mx:Button x="156" y="0" label="Button" cornerRadius="0" height="18"/>
+					</mx:HBox>
+					<mx:ViewStack x="10" y="26" id="viewstack1" width="100%" height="100%">
+						<mx:Canvas label="View 1" width="100%" height="100%">
+						</mx:Canvas>
+					</mx:ViewStack>
+					
+				</mx:VBox>
+				
+				
+			</mx:Canvas>
+			<mx:Canvas label="Edit Collections" width="100%" height="100%">
+			</mx:Canvas>
+			<mx:Canvas label="Manage Collections" width="100%" height="100%">
+			</mx:Canvas>
+		</mx:ViewStack>
+		
+		
+
+	</mx:VBox>
+</mx:Canvas>

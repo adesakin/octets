@@ -1,0 +1,8 @@
+
+findButton
+{
+	disabledSkin: Embed(source="findButton.swf", symbol="Button_disabledSkin");
+	downSkin: Embed(source="findButton.swf", symbol="Button_downSkin");
+	overSkin: Embed(source="findButton.swf", symbol="Button_overSkin");
+	upSkin: Embed(source="findButton.swf", symbol="Button_upSkin");
+}

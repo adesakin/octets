@@ -1,0 +1,53 @@
+<p>
+  <b>Parent:</b>
+  <%=h @device.parent_id %>
+</p>
+
+<p>
+  <b>Id path:</b>
+  <%=h @device.id_path %>
+</p>
+
+<p>
+  <b>Children count:</b>
+  <%=h @device.children_count %>
+</p>
+
+<p>
+  <b>Family:</b>
+  <%=h @device.family_id %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%=h @device.level %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%=h @device.level %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @device.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @device.description %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%=h @device.notes %>
+</p>
+
+<p>
+  <b>Updated by:</b>
+  <%=h @device.updated_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_device_path(@device) %> |
+<%= link_to 'Back', devices_path %>

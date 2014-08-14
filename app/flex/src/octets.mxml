@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" 
+	backgroundColor="#ffffff" backgroundGradientAlphas="[1.0, 1.0]" backgroundGradientColors="[#545555, #D0D5D5]" currentState="loginNoDomain" xmlns:com="com.*">
+	<mx:Style source="assets/css/Globals.css"/>
+	
+	<mx:Script>
+		<![CDATA[
+		
+		
+			
+		]]>
+	</mx:Script>
+	
+	
+	<mx:states>
+		<mx:State name="loginIncludeDomain">
+			<mx:AddChild relativeTo="{spacer1}" position="before">
+				<mx:HBox width="100%">
+					<mx:Text text="Domain" fontWeight="normal" color="#D3DCDC" styleName="myText"/>
+					<mx:Spacer width="14"/>
+					<mx:ComboBox cornerRadius="0" editable="true" id="loginDomain"></mx:ComboBox>
+				</mx:HBox>
+			</mx:AddChild>
+			<mx:SetProperty target="{loginRemoveDomain}" name="label" value="Remove Domain"/>
+			<mx:SetEventHandler target="{loginRemoveDomain}" name="click" handler="currentState='loginNoDomain'"/>
+			<mx:SetStyle target="{canvas1}" name="borderStyle" value="solid"/>
+			<mx:SetProperty target="{label1}" name="styleName" value="myText"/>
+			<mx:SetStyle target="{label1}" name="fontFamily"/>
+		</mx:State>
+		<mx:State name="loginNoDomain">
+			<mx:SetEventHandler target="{loginSubmit}" name="click" handler="currentState='main'"/>
+		</mx:State>
+		<mx:State name="main">
+			<mx:RemoveChild target="{vbox1}"/>
+			<mx:SetStyle target="{canvas1}" name="backgroundColor" value="#D0D5D5"/>
+			<mx:AddChild relativeTo="{canvas1}" position="lastChild">
+				<mx:TabNavigator top="20" left="20" bottom="20" right="20" 
+					fontWeight="normal" styleName="myTabs" id="tabMain">
+					<mx:Canvas label="Overview" width="100%" height="100%">
+						<com:overview />
+					</mx:Canvas>					
+					<mx:Canvas label="Collections" width="100%" height="100%">
+						<com:collections />
+					</mx:Canvas>
+					<mx:Canvas label="Networks" width="100%" height="100%">
+						<mx:VBox width="100%" height="100%">		
+							<mx:LinkBar dataProvider="networksLinkBar">
+							</mx:LinkBar>
+							<mx:ViewStack id="networksLinkBar" width="100%" height="100%">
+								<mx:Canvas label="+ View Networks" width="100%" height="100%">
+								</mx:Canvas>
+								<mx:Canvas label=" + Add Networks" width="100%" height="100%">
+									<mx:HDividedBox width="100%" height="100%">
+										<com:header />
+									</mx:HDividedBox>
+								</mx:Canvas>
+								<mx:Canvas label=" + Edit Networks" width="100%" height="100%">
+								</mx:Canvas>
+								<mx:Canvas label="+ Manage Networks" width="100%" height="100%">
+								</mx:Canvas>
+							</mx:ViewStack>
+						</mx:VBox>
+					</mx:Canvas>
+					<mx:Canvas label="Devices" width="100%" height="100%">
+						<mx:ComboBox x="141" y="84" width="273" cornerRadius="0"></mx:ComboBox>
+						<mx:Button x="141" y="138" label="Add Child" width="121" cornerRadius="0"/>
+						<mx:Button x="309" y="138" label="Remove Child" width="105" cornerRadius="0"/>
+						<mx:TextInput x="141" y="189" width="273" borderStyle="solid"/>
+					</mx:Canvas>
+					<mx:Canvas label="Circuits" width="100%" height="100%">
+					</mx:Canvas>
+					<mx:Canvas label="Systems" width="100%" height="100%">
+					</mx:Canvas>
+				</mx:TabNavigator>
+			</mx:AddChild>
+			<mx:SetProperty target="{canvas1}" name="y" value="0"/>
+		</mx:State>
+	</mx:states>
+	<mx:Canvas width="100%" height="100%" horizontalScrollPolicy="off"  id="canvas1">
+		<mx:VBox horizontalCenter="0" verticalCenter="0" id="vbox1">
+			
+			<mx:VBox width="300" height="334" horizontalCenter="0" verticalCenter="0" horizontalScrollPolicy="off" 
+				paddingTop="40" paddingLeft="20" paddingRight="20"  borderStyle="solid"
+				fontFamily="Arial" fontSize="12" verticalGap="14">
+				<mx:HBox width="100%" borderStyle="none">
+					<mx:Label text="Username" fontWeight="normal" color="#D3DCDC" styleName="myText"/>
+					<mx:Spacer width="2"/>
+					
+					<mx:TextInput  id="loginUsername"/>
+				</mx:HBox>
+				<mx:HBox width="100%">
+					<mx:Text text="Password" fontWeight="normal" color="#D3DCDC" styleName="myText"/>
+					<mx:Spacer width="6"/>
+					<mx:TextInput displayAsPassword="true" id="loginPassword"/>
+				</mx:HBox>
+				<mx:Spacer id="spacer1"/>
+				<mx:HBox width="100%">
+					<mx:Button label="Login" cornerRadius="0" id="loginSubmit" click="currentState='main'" fontWeight="normal" styleName="myText"/>
+					<mx:Spacer width="4"/>
+					<mx:LinkButton label="Specify Domain" color="#D3DCDC" click="currentState='loginIncludeDomain'" id="loginRemoveDomain" fontWeight="normal" styleName="myText"/>
+				</mx:HBox>
+			</mx:VBox>
+			<mx:Label text="Octets IPAM. Lopworks Limited 2010" fontSize="11" color="#D3DCDC" horizontalCenter="0" verticalCenter="0" id="label1" styleName="myText"/>
+		</mx:VBox>
+	</mx:Canvas>
+</mx:Application>

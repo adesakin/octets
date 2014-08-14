@@ -1,0 +1,32 @@
+<h1>Listing network_details</h1>
+
+<table>
+  <tr>
+    <th>Collection</th>
+    <th>Network address</th>
+    <th>Subnet mask</th>
+    <th>Network class</th>
+    <th>Description</th>
+    <th>Note</th>
+    <th>Updated by</th>
+  </tr>
+
+<% @network_details.each do |network_detail| %>
+  <tr>
+    <td><%=h network_detail.collection_id %></td>
+    <td><%=h network_detail.network_address %></td>
+    <td><%=h network_detail.subnet_mask %></td>
+    <td><%=h network_detail.network_class %></td>
+    <td><%=h network_detail.description %></td>
+    <td><%=h network_detail.note %></td>
+    <td><%=h network_detail.updated_by %></td>
+    <td><%= link_to 'Show', network_detail %></td>
+    <td><%= link_to 'Edit', edit_network_detail_path(network_detail) %></td>
+    <td><%= link_to 'Destroy', network_detail, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New network_detail', new_network_detail_path %>

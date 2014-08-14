@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  collection_id: 
+  network_address: 
+  subnet_mask: 
+  network_class: 
+  description: MyString
+  note: MyString
+  updated_by: MyString
+  parent_id: 
+
+two:
+  collection_id: 
+  network_address: 
+  subnet_mask: 
+  network_class: 
+  description: MyString
+  note: MyString
+  updated_by: MyString
+  parent_id: 

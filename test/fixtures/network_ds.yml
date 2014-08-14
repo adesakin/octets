@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  network_address: 
+  description: MyString
+  updated_by: MyString
+
+two:
+  network_address: 
+  description: MyString
+  updated_by: MyString
